@@ -1,0 +1,15 @@
+.container{
+    border: 1px solid;
+    padding: 40px;
+    background: white;
+    height: 50vh;
+}
+
+.hero{
+    background: lightgrey;
+}
+
+button.button.is-uppercase.is-link {
+    bottom: 30px;
+    position: absolute;
+}
