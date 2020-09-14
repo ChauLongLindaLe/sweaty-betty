@@ -7,9 +7,27 @@
 
 .hero{
     background: lightgrey;
+    
 }
 
 button.button.is-uppercase.is-link {
     bottom: 30px;
     position: absolute;
+}
+
+#login-error{
+    display:none;
+}
+
+#registration-form{
+    display: none;
+}
+
+#registration-form .container {
+    height: auto;
+}
+
+#registration-form .button {
+    position: relative !important;
+    bottom: auto !important;
 }

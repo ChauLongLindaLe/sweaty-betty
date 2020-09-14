@@ -14,50 +14,85 @@
 </head>
     <body>
         <main>
-                 <!-- Hero -->
             <section class="hero section is-fullheight ">
-            <div class="columns is-desktop">
-            <div class="column">
-                  <div class="login container">
-                    <h3 class="subtitle is-uppercase">I have a login</h3>
-                    <hr />
-                    <form>
-                        <div class="field">
-                        <label class="email">Email*</label>
-                        <input class="input" name="email"/>
+                <div id="login-form" class="columns">
+                    <div class="column">
+                        <div class="login container">
+                            <h3 class="subtitle is-uppercase">I have a login</h3>
+                            <hr />
+                            <form method="post" name="form" onsubmit="validateForm()">
+                                <div class="field">
+                                    <label class="email">Email*</label>
+                                    <input id="email" class="input" name="email"/>
+                                    <p id="email-error" class="help is-danger"></p>
+                                </div>
+                                <div class="field">
+                                    <label class="password">Password*</label>
+                                    <input id="password" class="input" type="password" name="password" />
+                                    <p id="password-error" class="help is-danger"></p>
+                                </div>
+                                <div class="field">
+                                    <label class="checkbox">
+                                        <input type="checkbox">
+                                        Stay signed in
+                                    </label>
+                                </div>
+                                <button type="submit" class="button is-uppercase is-link">Sign In</button>
+                            </form>
                         </div>
-                        <div class="field">
-                        <label class="password">Password*</label>
-                        <input class="input" type="password" name="password" />
+                    </div>
+                    <div class="column">
+                        <div class="register container">
+                            <h3 class="subtitle is-uppercase">Creating an account</h3>
+                            <hr />
+                            <form>
+                                <div class="field">
+                                    <p>
+                                        Creating your account is quick and simple and allows you to track, change or return your order
+                                    </p>
+                                </div>
+                                <button class="button is-uppercase is-link" onclick="showRegForm()">Create an account</button>
+                            </form>
                         </div>
-                        <div class="field">
-                            <label class="checkbox">
-                                <input type="checkbox">
-                                Stay signed in
-                            </label>
-                        </div>
-                        <button class="button is-uppercase is-link">Sign In</button>
-                    </form>
+                    </div>
                 </div>
-            </div>
-            <div class="column">
-                 <div class="register container">
-                    <h3 class="subtitle is-uppercase">Creating an account</h3>
-                    <hr />
-                    <form>
-                        <div class="field">
-                            <p>
-                                Creating your account is quick and simple and allows you to track, change or return your order
-                            </p>
+
+                <!-- REGISTRATION -->
+                <div id="registration-form" class="columns">
+                    <div class="column">
+                        <div class="container">
+                            <h3 class="subtitle is-uppercase">Register new account</h3>
+                            <hr />
+                            <form method="post" name="form" onsubmit=" return validateForm()">
+                                <p id="login-error" class="help is-danger">Email or password is incorrect</p>
+                                <div class="field">
+                                    <label class="name">First Name</label>
+                                    <input class="input" name="text"/>
+                                </div>
+                                <div class="field">
+                                    <label class="name">Last Name</label>
+                                    <input class="input" name="text"/>
+                                </div>
+                                <div class="field">
+                                    <label class="email">Email*</label>
+                                    <input class="input" name="email"/>
+                                </div>
+                                <div class="field">
+                                    <label class="password">Password*</label>
+                                    <input class="input" type="password" name="password" />
+                                </div>
+                                <div class="field">
+                                    <label class="password">Repeat Password*</label>
+                                    <input class="input" type="password" name="password" />
+                                </div>
+                                <div class="field">
+                                    <button type="submit" class="button is-uppercase is-link">Create account</button>
+                                    <a onclick="showLoginForm()" >Already have an account? click here </a>
+                                </div>
+                            </form>
                         </div>
-                        <button class="button is-uppercase is-link">Create an account</button>
-                    </form>
+                    </div>
                 </div>
-            </div>
-            </div>
-       
-              
-               
             </section>
         </main>
         <!-- JQUERY -->
